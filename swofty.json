@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "id": "kizi.no-auto-reset",
+  "name": "No Auto Reset to Track",
+  "version": "0.0.2",
+  "author": "Kizi",
+  "description": "Stops the game from resetting a car to the track by itself (the human-controlled cars too). One switch, in-game. Beta.",
+  "license": "MIT",
+  "repository": "https://github.com/Kizikafuka/f1-25-no-auto-reset-to-track",
+  "icon": "icon.png",
+  "category": "utility",
+  "kind": [
+    "native"
+  ],
+  "compat": {
+    "game": "f1_25",
+    "launcher": ">=1.8.19",
+    "game_builds": [
+      ">=25251167"
+    ]
+  },
+  "requires": [
+    {
+      "id": "swofty.core",
+      "version": ">=0.1.0"
+    }
+  ],
+  "options": [
+    {
+      "id": "enabled",
+      "type": "toggle",
+      "label": "Never reset a car to the track",
+      "description": "Turns off the game's automatic reset to track for every car, including human-controlled and AI Drive cars. Off = the game resets cars as usual.",
+      "default": true,
+      "binds": "native"
+    }
+  ],
+  "operations": {
+    "native": [
+      {
+        "dll": "native/kizi_no_auto_reset.dll"
+      }
+    ]
+  }
+}
